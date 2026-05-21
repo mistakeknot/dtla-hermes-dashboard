@@ -24,6 +24,13 @@ test('Nousromancer plugin is a slot-only Now Bar/header plugin and does not clai
   assert.doesNotMatch(plugin, /HERO SLOT|hero panel|session heat|gateway relay|agent signal/i);
 });
 
+test('Nousromancer header-left slot stays crest-only to avoid colliding with native Hermes title', async () => {
+  const plugin = await readFile(PLUGIN_PATH, 'utf8');
+
+  assert.match(plugin, /nousromancer-header-crest/);
+  assert.doesNotMatch(plugin, /nousromancer-mark/);
+});
+
 test('README presents Nousromancer as a minimal operations skin, not a cockpit HUD/sidebar demo', async () => {
   const source = await readFile(README_PATH, 'utf8');
 

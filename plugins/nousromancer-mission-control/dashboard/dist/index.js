@@ -74,13 +74,12 @@
   function HeaderCrestSlot() {
     return h(
       "div",
-      { className: "nousromancer-surface", style: { display: "flex", alignItems: "center", gap: 8, paddingLeft: 10, color: "#D8A6BA" } },
-      h("svg", { width: 30, height: 30, viewBox: "0 0 30 30", fill: "none", stroke: "currentColor", strokeWidth: 1.6, "aria-hidden": true },
+      { className: "nousromancer-surface nousromancer-header-crest", "aria-label": "Nousromancer", title: "Nousromancer", style: { display: "flex", alignItems: "center", justifyContent: "center", flex: "0 0 auto", width: 28, height: 30, marginLeft: 2, color: "#D8A6BA" } },
+      h("svg", { width: 24, height: 24, viewBox: "0 0 30 30", fill: "none", stroke: "currentColor", strokeWidth: 1.6, "aria-hidden": true },
         h("path", { d: "M15 2 L27 15 L15 28 L3 15 Z" }),
         h("path", { d: "M15 7 L23 15 L15 23 L7 15 Z", stroke: "#8EA0A8" }),
         h("circle", { cx: 15, cy: 15, r: 2.6, fill: "currentColor", stroke: "none" }),
       ),
-      h("span", { className: "nousromancer-mark", style: { fontWeight: 600, fontSize: "0.72rem", letterSpacing: "0.18em" } }, "Nousromancer"),
     );
   }
 
